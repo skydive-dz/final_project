@@ -9,7 +9,7 @@ class LoginPageLocators():
     REGISTER_BUTTON = (By.CSS_SELECTOR, '[name = "registration_submit"]')
 
 class ProductPageLocators():
-    ADD_TO_BUSKET_BTN = (By.CSS_SELECTOR, '.btn-add-to-basket')
+    ADD_TO_BASKET_BTN = (By.CSS_SELECTOR, '.btn-add-to-basket')
     PRODUCT_NAME = (By.CSS_SELECTOR, '.product_main h1')
     PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main p.price_color')
     PRODUCT_NAME_INTO_BASKET = (By.CSS_SELECTOR, "#messages div:first-child div.alertinner strong")
@@ -18,3 +18,8 @@ class ProductPageLocators():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_BUTTON = (By.CSS_SELECTOR, 'span.btn-group a')
+
+class BasketLocators():
+    EMPTY_BASKET = (By.CSS_SELECTOR, 'btn btn-lg')
+    MESSAGE_ABOUT_EMPTY_BASKET = (By.CSS_SELECTOR, "#content_inner")

@@ -17,7 +17,7 @@ class ProductPage(BasePage):
 		self.should_be_success_message()
 
 	def should_be_add_button(self):
-		assert self.is_element_present(*ProductPageLocators.ADD_TO_BUSKET_BTN), 'The button add to busket not found!'
+		assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_BTN), 'The button add to busket not found!'
 
 	def should_be_name(self):
 		assert self.is_element_present(*ProductPageLocators.PRODUCT_NAME), 'Product name not found!'
@@ -27,12 +27,12 @@ class ProductPage(BasePage):
 		
 	def should_be_correct_name(self):
 		self.product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-		self.product_name_into_busket = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_INTO_BUSKET).text
+		self.product_name_into_busket = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_INTO_BASKET).text
 		assert product_name == product_name_into_busket, 'Invalid product name!'
 
 	def should_be_correct_price(self):
 		self.product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
-		self.product_price_into_busket = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE_INTO_BUSKET).text
+		self.product_price_into_busket = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE_INTO_BASKET).text
 		assert product_price == product_price_into_busket, 'Invalid product price!'
 
 
