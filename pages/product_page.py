@@ -1,6 +1,7 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
 import time
+
 class ProductPage(BasePage):
 
 	def should_be_product_page_link(self):
@@ -11,8 +12,7 @@ class ProductPage(BasePage):
 		self.should_be_price()
 		self.should_be_add_button()
 
-		button = self.browser.find_element(*ProductPageLocators.ADD_TO_BUSKET_BTN).click()
-		# time.sleep(1)
+		button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BTN).click()
 		self.solve_quiz_and_get_code()
 		self.should_be_success_message()
 
